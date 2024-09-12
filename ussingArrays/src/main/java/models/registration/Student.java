@@ -1,0 +1,44 @@
+package models.registration;
+
+import java.util.ArrayList;
+
+public class Student {
+    private String name;
+    private int age;
+    private ArrayList<Course> courses;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.courses = new ArrayList<>();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public void addCourse(Course course) {
+        courses.add(course);
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Age: " + age + ", Courses: " + courses;
+    }
+}
